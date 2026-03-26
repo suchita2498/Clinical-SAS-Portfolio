@@ -10,7 +10,7 @@ ODS GRAPHICS ON;
   Standard "Table 1" in every clinical trial
 ******************************************/
 
-TITLE1 "Table 1.1";
+TITLE1 "Table 14.1.1";
 TITLE2 "Summary of Demographics";
 TITLE3 "Safety Population";
 FOOTNOTE1 "DRUG = Investigational Drug | PLACEBO = Placebo";
@@ -27,14 +27,14 @@ RUN;
 /* Sex summary - use PROC FREQ for character variables */
 PROC FREQ DATA=adam.adsl;
   TABLES SEX * TRTP / NOCOL NOPERCENT NOROW;
-  TITLE1 "Table 1.2";
+  TITLE1 "Table 14.1.1(continued)";
   TITLE2 "Summary of Sex by Treatment Arm";
 RUN;
 
 /* Race summary */
 PROC FREQ DATA=adam.adsl;
   TABLES RACE * TRTP / NOCOL NOPERCENT NOROW;
-  TITLE1 "Table 1.3 ";
+  TITLE1 "Table 14.1.1(continued) ";
   TITLE2 "Summary of Race by Treatment Arm";
 RUN;
 TITLE;
@@ -45,7 +45,7 @@ FOOTNOTE;
   By treatment arm and severity
 ******************************************/
 
-TITLE1 "Table 2.1";
+TITLE1 "Table 14.3.1";
 TITLE2 "Summary of Treatment-Emergent Adverse Events";
 TITLE3 "Safety Population";
 FOOTNOTE1 "TEAE = Treatment-Emergent Adverse Event";
@@ -54,21 +54,21 @@ FOOTNOTE2 "Source: ADAE";
 /* AE count by term and treatment arm */
 PROC FREQ DATA=adam.adae;
   TABLES AEDECOD * TRTP / NOCOL NOPERCENT NOROW;
-  TITLE1 "Table 2.2";
+  TITLE1 "Table 14.3.1(continued)";
   TITLE2 "TEAE Count by Preferred Term and Treatment Arm";
 RUN;
 
 /* AE count by severity and treatment arm */
 PROC FREQ DATA=adam.adae;
   TABLES AESEV * TRTP / NOCOL NOPERCENT NOROW;
-  TITLE1 "Table 2.3";
+  TITLE1 "Table 14.3.1(continued)";
   TITLE2 "TEAE Count by Severity and Treatment Arm";
 RUN;
 
 /* AE count by relationship and treatment arm */
 PROC FREQ DATA=adam.adae;
   TABLES AEREL * TRTP / NOCOL NOPERCENT NOROW;
-  TITLE1 "Table 2.4 ";
+  TITLE1 "Table 14.3.1(continued) ";
   TITLE2 "TEAE Count by Relationship to Study Drug and Treatment Arm";
 RUN;
 
@@ -85,7 +85,7 @@ RUN;
   Primary Efficacy Endpoint
 ******************************************/
 
-TITLE1 "Table 3.1";
+TITLE1 "Table 14.2.1";
 TITLE2 "Summary of HbA1c (%) Change from Baseline at Week 4";
 TITLE3 "Intent-to-Treat Population";
 FOOTNOTE1 "CHG = Week 4 Value - Baseline Value";
@@ -111,7 +111,7 @@ RUN;
   Individual patient data listing
 ******************************************/
 
-TITLE1 "Listing 4.1";
+TITLE1 "Listing 16.2.1";
 TITLE2 "Listing of All Treatment-Emergent Adverse Events";
 TITLE3 "Safety Population";
 FOOTNOTE1 "Adverse events sorted by Subject ID and Start Date";
@@ -134,7 +134,7 @@ RUN;
   Primary Efficacy Visualization
 ******************************************/
 
-TITLE1 "Figure 5.1";
+TITLE1 "Figure 14.2.1";
 TITLE2 "Mean HbA1c (%) by Visit and Treatment Arm";
 FOOTNOTE1 "Error bars represent Standard Deviation";
 FOOTNOTE2 "Source: ADLB";
